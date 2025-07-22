@@ -1,6 +1,6 @@
 body {
   background-color: #f0f0f0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   margin: 0;
   padding: 0;
@@ -205,7 +205,12 @@ body {
     box-shadow: none;
     border-radius: 0;
     padding: 0;
-    background-color: rgba(255, 255, 255, 0.1); /* Um pouco de fundo para contraste */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.1
+    ); /* Um pouco de fundo para contraste */
   }
 
   .dropdown-content li a {
@@ -219,13 +224,13 @@ body {
   }
 
   .search-container {
-    width: calc(100% - 20px); 
+    width: calc(100% - 20px);
     margin: 10px auto;
-    background: #fff; 
+    background: #fff;
   }
 
   .search-input {
-    width: calc(100% - 40px); 
+    width: calc(100% - 40px);
     color: #333;
   }
 
