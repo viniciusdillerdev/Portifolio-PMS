@@ -1,66 +1,65 @@
 body {
   background-color: #f0f0f0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   color: #333;
   margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  padding: 0px;
 }
-
-.main-header {
+.banner {
   width: 100%;
+  height: auto;
   background-color: #009189;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 10px 0;
-}
-
-.header-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.header-logo img {
-  max-height: 60px; /* Ajuste o tamanho da logo conforme necessário */
-  display: block;
-}
-
-.main-nav {
+.writing-banner {
   display: flex;
-  align-items: center;
+  padding-left: 0;
 }
-
 .nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 25px;
-  align-items: center;
-}
-
-.nav-list li a {
-  text-decoration: none;
   color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex; /* Para alinhar ícone e texto */
-  align-items: center;
-  gap: 5px;
+  font-size: 2em;
+  text-align: center;
+  margin: 0 auto;
+  padding-left: 50px;
+  list-style: none;
+  display: flex;
+  gap: 40px;
 }
 
-.nav-list li a:hover {
-  background-color: #007a73;
+.nav-list a {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background 0.2s;
+  font-size: 25px;
 }
 
-/* Dropdown */
+.nav-list a:active,
+.nav-list a:focus,
+.nav-list a:hover {
+  background: #007a73;
+}
+
+.nav-list input[type="text"] {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  background: #e0f7f6;
+  color: black;
+  outline: none;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-list input[type="text"]:focus {
+  box-shadow: 0 0 0 2px #009189;
+  background: white;
+}
 .dropdown {
   position: relative;
 }
@@ -69,186 +68,61 @@ body {
   display: none;
   position: absolute;
   background-color: #fff;
-  min-width: 220px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 100; /* Garante que o dropdown fique acima de outros elementos */
+  z-index: 1;
   list-style: none;
-  padding: 10px 0;
-  margin-top: 5px;
-  border-radius: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .dropdown-content li a {
   color: #333;
-  padding: 10px 20px;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
-  font-size: 1rem;
 }
 
 .dropdown-content li a:hover {
-  background-color: #f0f0f0;
+  background-color: #f1f1f1;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown.active .dropdown-content {
+.dropdown:hover .dropdown-content {
   display: block;
 }
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  align-items: center;
-  background: #e0f7f6;
-  border-radius: 20px;
-  padding: 5px 10px;
-  transition: all 0.3s ease;
-}
-
-.search-input {
-  border: none;
-  background: transparent;
-  padding: 5px 10px;
-  font-size: 1rem;
-  color: #333;
-  outline: none;
-  width: 180px; /* Largura inicial */
-  transition: width 0.3s ease;
-}
-
-.search-input::placeholder {
-  color: #666;
-}
-
-.search-input:focus {
-  width: 220px; /* Aumenta a largura no foco */
-  background: white;
-}
-
-.search-button {
-  background: none;
-  border: none;
-  color: #009189;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Menu Toggle (Hamburger Icon) */
-.menu-toggle {
-  display: none; /* Esconde por padrão em telas maiores */
-  background: none;
-  border: none;
-  color: #ffffff;
-  font-size: 1.8rem;
-  cursor: pointer;
-  padding: 5px;
-}
-
+/* Responsividade */
 /* Responsividade */
 @media (max-width: 900px) {
-  .header-content {
+  /* 1. Empilha os itens principais do banner (imagem e navegação) */
+  .banner {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 20px; /* Adiciona um espaço entre a imagem e a navegação */
+    padding: 20px 0; /* Melhora o espaçamento vertical no mobile */
   }
 
-  .main-nav {
+  /* 2. Ajusta o contêiner do texto para se alinhar corretamente */
+  .writing-banner {
+    padding-left: 0;
     width: 100%;
-    margin-top: 10px;
   }
 
-  .menu-toggle {
-    display: block; /* Mostra o ícone de hambúrguer */
-    align-self: flex-end; /* Alinha o botão à direita */
-    order: 1; /* Coloca o botão antes do nav-list */
-  }
-
-  .header-logo {
-    order: 2; /* Coloca o logo depois do botão para alinhamento */
-  }
-
+  /* 3. Organiza os links da navegação em coluna */
   .nav-list {
     flex-direction: column;
-    width: 100%;
-    display: none; /* Esconde a lista de navegação por padrão */
+    padding-left: 0; /* Remove o padding para permitir a centralização */
+    gap: 15px; /* Ajusta o espaço entre os links */
+    font-size: 1.5em; /* Aumenta um pouco a fonte no mobile para legibilidade */
+  }
+
+  /* 4. Ajusta a barra de busca para o layout de celular */
+  .nav-list input[type="text"] {
+    width: 90%; /* Faz a barra de busca ocupar mais espaço na tela */
+    max-width: 300px;
     text-align: center;
-    gap: 0;
-    margin-top: 10px;
   }
 
-  .nav-list.active {
-    display: flex; /* Mostra a lista de navegação quando ativada pelo JS */
-  }
-
-  .nav-list li {
-    width: 100%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-list li:last-child {
-    border-bottom: none;
-  }
-
-  .nav-list li a {
-    padding: 12px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-  }
-
-  .dropdown-content {
-    position: static; /* Ocupa o fluxo normal em telas pequenas */
-    width: 100%;
-    box-shadow: none;
-    border-radius: 0;
-    padding: 0;
-    background-color: rgba(
-      255,
-      255,
-      255,
-      0.1
-    ); /* Um pouco de fundo para contraste */
-  }
-
-  .dropdown-content li a {
-    color: #fff; /* Ajusta a cor do texto no dropdown para mobile */
-    padding-left: 40px; /* Indentação para subitens */
-    background-color: #008078; /* Fundo para subitens */
-  }
-
-  .dropdown-content li a:hover {
-    background-color: #00605a;
-  }
-
-  .search-container {
-    width: calc(100% - 20px);
-    margin: 10px auto;
-    background: #fff;
-  }
-
-  .search-input {
-    width: calc(100% - 40px);
-    color: #333;
-  }
-
-  .search-button {
-    color: #009189;
-  }
-}
-
-@media (max-width: 480px) {
-  .header-logo img {
-    max-height: 50px;
-  }
-
-  .nav-list li a {
-    font-size: 1rem;
-  }
-
-  .search-input {
-    font-size: 0.9rem;
+  /* 5. Oculta o dropdown no hover para melhorar a experiência em telas de toque */
+  .dropdown:hover .dropdown-content {
+    display: none;
   }
 }
