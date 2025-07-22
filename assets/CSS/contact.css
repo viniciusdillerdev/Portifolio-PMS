@@ -1,117 +1,187 @@
-/* Estilização do formulário de contato */
-/* Estilização do título e instrução do contato */
+/* Estilização geral da seção de contato */
+.contact-section {
+  max-width: 700px; /* Aumentei um pouco a largura máxima para o formulário */
+  margin: 40px auto; /* Adicionei margem superior e inferior para espaçamento */
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+}
+
+/* Estilização do título e instrução */
 .contact-section h1 {
   text-align: center;
-  font-size: 2.2rem;
-  color: #009189;
-  margin-bottom: 5px;
+  font-size: 2.5rem; /* Aumentei o tamanho da fonte */
+  color: #007a73; /* Cor ligeiramente ajustada para harmonizar */
+  margin-bottom: 10px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 .contact-section p {
   text-align: center;
-  font-size: 1.15rem;
-  color: #444;
-  margin-bottom: 1px;
+  font-size: 1.2rem;
+  color: #555; /* Cor mais escura para melhor legibilidade */
+  margin-bottom: 25px; /* Mais espaço após a instrução */
+  line-height: 1.5;
 }
+
+/* Estilização do formulário */
 .contact-section form {
-  max-width: 500px;
-  margin: 30px auto;
-  background: #f9f9f9;
-  padding: 30px 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 18px; /* Espaçamento uniforme entre os campos */
+}
+
+.form-group { /* Agrupa label e input para melhor controle */
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-section label {
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 8px; /* Mais espaço entre label e input */
   color: #333;
+  font-size: 1.05rem;
 }
 
 .contact-section input,
 .contact-section textarea {
-  padding: 10px 12px;
-  border: 1px solid #bdbdbd;
+  padding: 12px 15px; /* Aumentei o padding */
+  border: 1px solid #c9c9c9;
   border-radius: 8px;
-  font-size: 1rem;
-  background: #fff;
-  transition: border-color 0.2s;
+  font-size: 1.05rem;
+  background: #fdfdfd;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
   outline: none;
-  resize: none;
+  resize: vertical; /* Permite redimensionar verticalmente apenas */
+  min-height: 40px; /* Altura mínima para inputs */
+}
+
+.contact-section textarea {
+  min-height: 120px; /* Altura mínima para textarea */
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
   border-color: #009189;
+  box-shadow: 0 0 0 3px rgba(0, 145, 137, 0.2); /* Sombra no foco */
+}
+
+/* Botões */
+.button-group {
+  display: flex;
+  justify-content: flex-end; /* Alinha os botões à direita */
+  gap: 15px; /* Espaçamento entre os botões */
+  margin-top: 20px; /* Espaço acima dos botões */
 }
 
 .contact-section button {
-  padding: 10px 0;
+  padding: 12px 25px; /* Aumentei o padding dos botões */
   border: none;
   border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  flex-grow: 1; /* Permite que os botões cresçam */
+  max-width: 150px; /* Limita a largura máxima dos botões */
+}
+
+.contact-section button[type="submit"] {
   background: #009189;
   color: #fff;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
+}
+
+.contact-section button[type="submit"]:hover {
+  background: #007a73;
+  transform: translateY(-2px); /* Efeito de elevação */
 }
 
 .contact-section button[type="reset"] {
   background: #e0e0e0;
   color: #333;
-  margin-left: px;
-  margin-right: px;
 }
 
-.contact-section button:hover {
-  background: #009189;
+.contact-section button[type="reset"]:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
 }
 
+/* Nota inferior */
 .contact-section .note {
-  font-size: 0.95rem;
-  color: #666;
-  margin-top: 5px;
-}
-.contact-section {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 16px;
-  background: #fff;
-  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+  margin-top: 15px; /* Espaço para a nota */
 }
 
-.contact-section form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-section label,
-.contact-section input,
-.contact-section textarea,
-.contact-section button,
-.contact-section .note {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-@media (max-width: 600px) {
+/* Responsividade */
+@media (max-width: 768px) {
   .contact-section {
-    max-width: 100%;
-    padding: 8px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
   }
+
+  .contact-section h1 {
+    font-size: 2rem;
+  }
+
+  .contact-section p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-section input,
+  .contact-section textarea,
+  .contact-section button {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  .contact-section textarea {
+    min-height: 100px;
+  }
+
+  .button-group {
+    flex-direction: column; /* Botões empilhados em telas menores */
+    align-items: center; /* Centraliza os botões */
+    gap: 10px;
+  }
+
+  .contact-section button {
+    width: 100%;
+    max-width: 250px; /* Aumenta a largura máxima dos botões empilhados */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .contact-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-section p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-section label {
+    font-size: 0.9rem;
+  }
+
   .contact-section input,
   .contact-section textarea {
-    font-size: 1em;
-    width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 10px;
   }
-  .contact-section button {
-    font-size: 1em;
-    width: 100%;
+
+  .contact-section textarea {
+    min-height: 80px;
   }
 }

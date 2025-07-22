@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Portal Projetos</title>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlro1oF69a/kE/K1a6S0A2D0p2W6h1zQd1c/4M3j2+oP2p2eQz+G2kK/J1N9fVnF9F9K+2O+0Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="header-content">
+        <a href="https://www.saquarema.rj.gov.br/" target="_blank" class="header-logo">
+          <img src="../assets/images/Logo.png" alt="Logo Prefeitura de Saquarema" />
+        </a>
+        <nav class="main-nav">
+          <button class="menu-toggle" aria-label="Abrir Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+              <a href="Projetos.html">Projetos <i class="fas fa-chevron-down"></i></a>
+              <ul class="dropdown-content">
+                <li><a href="#">Secretaria de Educação</a></li>
+                <li><a href="#">Secretaria de Saúde</a></li>
+                <li><a href="#">Secretaria de Obras</a></li>
+                <li><a href="#">Secretaria de Meio Ambiente</a></li>
+              </ul>
+            </li>
+            <li><a href="Contato.html">Contato</a></li>
+            <li>
+              <div class="search-container">
+                <input
+                  class="search-input"
+                  id="search"
+                  type="text"
+                  pattern=".{3,}"
+                  placeholder="O que você procura?"
+                />
+                <button class="search-button" aria-label="Buscar">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="contact-section">
+      <h1>Contato</h1>
+      <p>Para entrar em contato conosco, preencha o formulário abaixo:</p>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="name">Nome Completo:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Telefone:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="[0-9]{10,11}"
+            title="Digite um número de telefone válido (10 ou 11 dígitos)"
+          />
+          <span class="note">* Formato: 1234567890 ou 12345678901</span>
+        </div>
+
+        <div class="form-group">
+          <label for="cpf">CPF:</label>
+          <input
+            type="text"
+            id="cpf"
+            name="cpf"
+            required
+            pattern="\d{11}"
+            title="Digite um CPF válido (11 dígitos)"
+          />
+          <span class="note">* Formato: 12345678901</span>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Assunto:</label>
+          <input type="text" id="subject" name="subject" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <div class="button-group">
+          <button type="submit">Enviar</button>
+          <button type="reset">Limpar</button>
+        </div>
+        <p class="note">* Todos os campos são obrigatórios.</p>
+        <p class="note">* Responderemos o mais breve possível.</p>
+        <p class="note">
+          * Para questões urgentes, entre em contato pelo telefone:
+          <a href="tel:+552112345678">(21) 1234-5678</a>
+        </p>
+      </form>
+    </section>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
