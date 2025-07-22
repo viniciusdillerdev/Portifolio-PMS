@@ -1,0 +1,80 @@
+/* Estilização do formulário de contato */
+/* Estilização do título e instrução do contato */
+.contact-section h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #009189;
+  margin-bottom: 5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-section p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #444;
+  margin-bottom: 1px;
+}
+.contact-section form {
+  max-width: 500px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 10px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border-color 0.2s;
+  outline: none;
+  resize: none;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #009189;
+}
+
+.contact-section button {
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #009189;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-section button[type="reset"] {
+  background: #e0e0e0;
+  color: #333;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.contact-section button:hover {
+  background: #009189;
+}
+
+.contact-section .note {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 5px;
+}

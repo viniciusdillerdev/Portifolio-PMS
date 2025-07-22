@@ -15,16 +15,25 @@
         <div class="writing-banner">
           <ul class="nav-list">
             <li class="escrita-banner"><a href="index.html">Início</a></li>
-            <li class="escrita-banner"><a href="Projetos.html">Projetos</a></li>
-            <li class="escrita-banner"><a href="Contato.html">Contato</a></li>
-            <input
-              class="escrita-banner"
-              id="search"
-              type="text"
-              pattern=".{3,}"
-              placeholder="O que você procura?"
-            />
-          </ul>
+           <li class="escrita-banner dropdown">
+            <a href="Projetos.html">Projetos</a>
+          <ul class="dropdown-content">
+         <li><a href="#">Secretaria de Educação</a></li>
+        <li><a href="#">Secretaria de Saúde</a></li>
+        <li><a href="#">Secretaria de Obras</a></li>
+       <li><a href="#">Secretaria de Meio Ambiente</a></li>
+        <!-- Adicione mais secretarias aqui -->
+      </ul>
+      </li>
+      <li class="escrita-banner"><a href="Contato.html">Contato</a></li>
+      <input
+    class="escrita-banner"
+    id="search"
+    type="text"
+    pattern=".{3,}"
+    placeholder="O que você procura?"
+  />
+</ul>
         </div>
       </div>
     </header>
