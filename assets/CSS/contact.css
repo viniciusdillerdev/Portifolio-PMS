@@ -65,8 +65,8 @@
 .contact-section button[type="reset"] {
   background: #e0e0e0;
   color: #333;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin-left: px;
+  margin-right: px;
 }
 
 .contact-section button:hover {
@@ -77,4 +77,41 @@
   font-size: 0.95rem;
   color: #666;
   margin-top: 5px;
+}
+.contact-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-section label,
+.contact-section input,
+.contact-section textarea,
+.contact-section button,
+.contact-section .note {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .contact-section input,
+  .contact-section textarea {
+    font-size: 1em;
+    width: 100%;
+  }
+  .contact-section button {
+    font-size: 1em;
+    width: 100%;
+  }
 }
