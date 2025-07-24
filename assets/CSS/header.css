@@ -125,4 +125,22 @@ body {
   .dropdown:hover .dropdown-content {
     display: none;
   }
+
+  .nav-list a {
+    all: unset;
+    cursor: pointer;
+    color: inherit;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    font-size: 15px;
+  }
+
+  .nav-list input[type="text"] {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+  .banner img {
+    height: 4rem;
+  }
 }
