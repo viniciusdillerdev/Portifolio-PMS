@@ -33,7 +33,8 @@
   gap: 18px; /* Espaçamento uniforme entre os campos */
 }
 
-.form-group { /* Agrupa label e input para melhor controle */
+.form-group {
+  /* Agrupa label e input para melhor controle */
   display: flex;
   flex-direction: column;
 }
@@ -117,17 +118,16 @@
   margin-bottom: 0px; /* Remove margem inferior */
 }
 
+.button-group {
+  flex-direction: column; /* Botões empilhados em telas menores */
+  align-items: center; /* Centraliza os botões */
+  gap: 10px;
+}
 
-  .button-group {
-    flex-direction: column; /* Botões empilhados em telas menores */
-    align-items: center; /* Centraliza os botões */
-    gap: 10px;
-  }
-
-  .contact-section button {
-    width: 100%;
-    max-width: 250px; /* Aumenta a largura máxima dos botões empilhados */
-  }
+.contact-section button {
+  width: 100%;
+  max-width: 250px; /* Aumenta a largura máxima dos botões empilhados */
+}
 
 @media (max-width: 480px) {
   .contact-section {
@@ -151,10 +151,6 @@
   .contact-section input,
   .contact-section textarea {
     font-size: 0.9rem;
-    padding: 8px 10px;
-  }
-
-  .contact-section textarea {
-    min-height: 80px;
+    padding: 10px 10px;
   }
 }
